@@ -1,0 +1,11 @@
+Mode: built-in image_gen, transparent_background=true.
+Final foregrounds share the quiet.png pose. No moving head patches or circular head masks.
+
+quiet-foreground-aligned
+Use case: background-extraction. Image 1 is the exact edit target. Extract ONLY the human character Yuta with his full visible body, hand, silver ring, black katana and hilt. Remove Rika and all environment to real transparent alpha. CRITICAL image-registration task: use the EXACT original full 1672x941 canvas, preserve the original subject scale, x/y coordinates, silhouette, head, hair, closed eyelids, face, clothing creases, katana angle, hand and ring positions, dark colors and lighting. Do not redraw or beautify anything. Do not crop, center, zoom, rotate or reposition the extracted character. His body remains clipped by the bottom edge exactly as in the original. Do not add shadow, circle, vignette or glow. Output one RGBA image with genuinely transparent background, not a checkerboard.
+References: assets/quiet-closed.png
+
+hero-foreground-aligned
+Use case: identity-preserve. Image 1 is the exact pose and identity EDIT TARGET; image 2 is ONLY a reference for bright cyan lighting and sword energy, never for head/face shape or pose. Produce a full-canvas transparent cutout of exactly the character and katana in image 1, with brighter white uniform, natural brighter skin and cyan energy along the sword in the lighting mood of image 2. Remove Rika and all background to true transparent alpha. CRITICAL: head and face must stay at the EXACT coordinates and size of image 1. Copy its entire head silhouette, crown, straight parted hair, downturned tired open eyes, jaw, eye/nose/mouth landmarks and expression unchanged. Preserve the exact hand, fingers, same silver ring, hilt, sword angle and body pose from image 1. ONLY change illumination and add sword energy; do not reshape any anatomy. Keep the original full 1672x941 canvas and all registration; no cropping, recentering, zoom or rotation. The head must not move upward to match image 2. No circle, head halo, drop shadow, text, watermark or border. Output a full-canvas RGBA image with real alpha.
+References: assets/quiet.png, assets/hero-foreground.png
+

@@ -1,0 +1,25 @@
+# Local build output
+YutaCodex.exe
+source/YutaCodex.exe
+*.pdb
+bin/
+obj/
+
+# Render intermediates and local diagnostics
+frames/
+stills/
+work/
+*.log
+window-info*.json
+install-manifest.json
+
+# Distribution archives are uploaded as release assets
+*.zip
+
+# Editor and operating-system files
+.vs/
+.vscode/
+Thumbs.db
+Desktop.ini
+*.tmp
+dist/
